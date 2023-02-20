@@ -1,4 +1,7 @@
+DROP DATABASE IF EXISTS eleccions_generals;
 CREATE DATABASE eleccions_generals;
+
+USE eleccions_generals;
 
 CREATE TABLE comunitats_autonomes (
     comunitat_aut_id	TINYINT UNSIGNED AUTO_INCREMENT,
