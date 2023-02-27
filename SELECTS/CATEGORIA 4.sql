@@ -10,7 +10,7 @@ WITH RECURSIVE municipis_comunitat AS (
 	SELECT m.municipi_id, m.nom, m.codi_ine, m.provincia_id, m.districte
 		FROM municipis m
 			INNER JOIN municipis_comunitat mc ON m.provincia_id = mc.provincia_id
-				WHERE m.codi_ine != '08' /* Excluimos los municipios que ya hemos incluido en la consulta */
+				WHERE m.codi_ine != '08' /* Excloem els municipis que ja hem inclòs en la consulta */
 )
 SELECT *
 FROM municipis_comunitat;
