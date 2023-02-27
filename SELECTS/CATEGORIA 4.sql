@@ -1,4 +1,4 @@
-/*Aquesta consulta recursiva ens torna tots els municipis que pertanyen a la mateixa comunitat autònoma que el municipi inicial que hem seleccionat*/
+/*Aquesta consulta recursiva ens retorna tots els municipis que pertanyen a la mateixa comunitat autònoma que el municipi inicial que hem seleccionat*/
 WITH RECURSIVE municipis_comunitat AS (
 	SELECT m.municipi_id, m.nom, p.codi_ine, p.provincia_id, m.districte
 		FROM municipis m
