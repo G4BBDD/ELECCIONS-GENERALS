@@ -9,11 +9,19 @@ Projecte desenvolupat en Java amb el propòsit d'extreure dades dels arxius del 
 
 ## Package
 
-Hem dividit el projecte en 3 paquets principals: Model, Vista i Controlador.
+Hem dividit el projecte en 3 paquets principals: Importar, Select i LleiHondt
 
 - Importar
 - Select
 - LleiHondt
+
+## Class
+
+- importarComunitatsAutonomes
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa     - les dades que té l'arxiu.
+    
+- importarProvincies
+- importarPersones
 
 ## Authors
 
