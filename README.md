@@ -18,7 +18,7 @@ Hem dividit el projecte en 3 paquets principals: Importar, Select i LleiHondt
 ## Class
 
 - importarComunitatsAutonomes
-    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa     - les dades que té l'arxiu.
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu.
     
 - importarProvincies
 - importarPersones
