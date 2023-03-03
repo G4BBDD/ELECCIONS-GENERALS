@@ -15,8 +15,8 @@ public class ImportarProvincies {
             String usuario = "perepi";
             String contrasenya = "pastanaga";
             String tabla = "provincies";
-            //String dbURL = "jdbc:mysql://10.2.157.223:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD
-            String dbURL = "jdbc:mysql://192.168.56.103:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD real
+            String dbURL = "jdbc:mysql://10.2.157.223:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD
+            //String dbURL = "jdbc:mysql://192.168.56.103:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD real
             Connection conexion = DriverManager.getConnection(dbURL, usuario, contrasenya);
 
             // Leer el archivo .DAT
