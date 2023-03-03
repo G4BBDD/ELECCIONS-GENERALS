@@ -38,6 +38,18 @@ Totes les clases segueixen una estructura, hi ha una part dedicada a fer la conn
 - ImportarEleccionsMunicipis
     - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També agafa les PK de les altres taules i les asigna a la taula actual.
 
+- ImportarCandidats
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. Aquesta taula agafa les diferents PK's de les diferents taules i les asigna a les seves columnes.
+
+- ImportarVotsCa
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. Aquesta taula agafa les diferents PK's de les diferents taules i les asigna a les seves columnes.
+
+- ImportarVotsProvincials
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. Aquesta taula agafa les diferents PK's de les diferents taules i les asigna a les seves columnes.
+
+- ImportarVotsMunicipal
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. Aquesta taula agafa les diferents PK's de les diferents taules i les asigna a les seves columnes.
+
 ## Incidents
 Els problemes a l'hora de realitzar l'activitat i les solucions proposades han estat el següents:
 - La data de naixement a la taula "persones" és tot zeros. La solució ha estat donar el valor "null" al camp quan es doni aquest cas.
