@@ -49,6 +49,6 @@ public class Main {
         } else if(resposta == 3){
             System.out.println("Fins a la propera!");
             System.exit(1);
-        }else System.out.println("Error!");
+        }else System.out.println("Error !");
     }
 }
