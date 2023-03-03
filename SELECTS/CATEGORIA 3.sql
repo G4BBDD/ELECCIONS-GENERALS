@@ -1,9 +1,12 @@
-/*Fer recompte dels candidats suplents majors de 30 anys*/
-SELECT COUNT(CURDATE() - data_naixement > 30) AS 'Suplents majors de 30' 
-	FROM persones
-		WHERE (SELECT tipus 
-				FROM candidats
-					WHERE tipus = 'S');
+/*Obten el nombre total de vots vàlids a les eleccions municipals de la Comunitat Valenciana el 2019*/
+SELECT SUM(vots_valids) AS total_votos_validos 
+	FROM eleccions_municipis em
+		INNER JOIN municipis m ON m.municipi_id = em.municipi_id 
+			WHERE em.eleccio_id = (SELECT eleccio_id FROM eleccions WHERE any = 2019) 
+									AND 
+								m.provincia_id IN 
+					(SELECT comunitat_aut_id FROM comunitats_autonomes WHERE nom = 'Comunitat Valenciana');
+
 
 /*Seleccionar tots els municipis de la provincia de Barcelona*/
 SELECT nom AS "Municipis" 
@@ -28,13 +31,12 @@ SELECT nom_curt AS "Candidatura"
 		FROM candidatures
 			WHERE candidatura_id = (SELECT candidatura_id 
 							FROM vots_candidatures_ca
-								WHERE comunitat_autonoma_id = 12
+								WHERE comunitat_aut_id = 12
 									ORDER BY vots DESC LIMIT 1);
 
-/*Seleccionar tots els municipis de la Comunitat Valenciana (id = 17) que comencin amb la lletra D*/
-SELECT nom AS "Municipis" 
-	FROM municipis
-		WHERE provincia_id = (SELECT provincia_id 
-						FROM provincies
-							WHERE comunitat_aut_id = 17 AND nom LIKE 'D%');
+/*Obtén el nombre de candidatures presentades per cada partit polític a les eleccions generals de 2019*/
+SELECT nom_curt, COUNT(*) AS num_candidaturas 
+	FROM candidatures
+		WHERE eleccio_id = (SELECT eleccio_id FROM eleccions WHERE any = 2019) 
+			GROUP BY nom_curt;
                             
