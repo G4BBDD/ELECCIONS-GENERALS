@@ -36,6 +36,7 @@ Totes les clases segueixen una estructura, hi ha una part dedicada a fer la conn
     - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També s'encarrega de definir la "eleccio_id" com "1" ja que només tenim aquesta a la base de dades i hem decidit posar-ho manualment al codi.
 
 - ImportarEleccionsMunicipis
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També agafa les PK de les altres taules i les asigna a la taula actual.
 
 ## Incidents
 Els problemes a l'hora de realitzar l'activitat i les solucions proposades han estat el següents:
