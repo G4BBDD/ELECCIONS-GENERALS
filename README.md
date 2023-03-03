@@ -24,8 +24,12 @@ Totes les clases segueixen una estructura, hi ha una part dedicada a fer la conn
     - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu.
     
 - importarProvincies
-    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També necesita fer una SELECT per agafar el valor de 
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També necesita fer una SELECT per agafar el valor de la "comunitat_aut_id" de la taula de "comunitats_autonomes"
+    
 - importarPersones
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. Aquest codi també s'encarrega de comprovar si els valors de "dni" i "data_naixement" tenen com valor "0000-00-00" en el cas de "data_naixement" i "000000000" en el cas de "dni", el programa posara aquest valors com nulls
+
+
 
 ## Autors
 
