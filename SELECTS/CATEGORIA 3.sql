@@ -1,11 +1,12 @@
+
 /*Obten el nombre total de vots vàlids a les eleccions municipals de la Comunitat Valenciana el 2019*/
 SELECT SUM(vots_valids) AS total_votos_validos 
 	FROM eleccions_municipis em
 		INNER JOIN municipis m ON m.municipi_id = em.municipi_id 
 			WHERE em.eleccio_id = (SELECT eleccio_id FROM eleccions WHERE any = 2019) 
-									AND 
-								m.provincia_id IN 
-					(SELECT comunitat_aut_id FROM comunitats_autonomes WHERE nom = 'Comunitat Valenciana');
+													AND 
+												m.provincia_id IN 
+								(SELECT comunitat_aut_id FROM comunitats_autonomes WHERE nom = 'Comunitat Valenciana');
 
 
 /*Seleccionar tots els municipis de la provincia de Barcelona*/
@@ -39,26 +40,4 @@ SELECT nom_curt, COUNT(*) AS num_candidaturas
 	FROM candidatures
 		WHERE eleccio_id = (SELECT eleccio_id FROM eleccions WHERE any = 2019) 
 			GROUP BY nom_curt;
-                            
-/*Seleccionar tots els municipis de la provincia de Barcelona*/
-SELECT nom AS municipis FROM municipis
-	WHERE provincia_id = (SELECT provincia_id FROM provincies
-			WHERE nom = 'Barcelona');
 
-/*Seleccionar a quina provincia pertany el candidat més jove*/
-SELECT nom AS provincia FROM provincies
-	WHERE provincia_id = (SELECT provincia_id FROM candidats
-							WHERE persona_id = (SELECT persona_id FROM persones
-													WHERE data_naixement = (SELECT data_naixement FROM persones
-														ORDER BY data_naixement ASC LIMIT 1)));
-
-/*Seleccionar la candidatura amb més vots a la comunitat autònoma de Madrid*/
-SELECT nom_curt AS candidatura FROM candidatures
-	WHERE candidatura_id = (SELECT candidatura_id FROM vots_candidatures_ca
-								WHERE comunitat_aut_id = 12
-									ORDER BY vots DESC LIMIT 1);
-
-/*Seleccionar tots els municipis de la Comunitat Valenciana que comencin amb la lletra D*/
-SELECT nom AS municipis FROM municipis
-	WHERE provincia_id IN (SELECT provincia_id FROM provincies
-							WHERE comunitat_aut_id = 17) AND nom LIKE 'D%';
