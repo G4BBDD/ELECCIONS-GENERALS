@@ -27,16 +27,14 @@ SELECT c.comunitat_aut_id AS Comunitat_Aut_Id, c.nom AS Comunitat_Autonoma, vo.v
 			GROUP BY c.comunitat_aut_id, c.nom, vo.vots
 				ORDER BY vo.vots DESC;
                 
-/* Mostra els vots de cada comunitat autònoma, província i municipi */
+/* Obtén el nom de tots els candidats i el seu partit en Huelva per les eleccions de l'any 2019. */
 
-SELECT voca.vots AS Comunitat_Autonomes, vop.vots AS Provincies, vom.vots AS Municipis
-	FROM vots_candidatures_ca voca
-		INNER JOIN comunitats_autonomes c ON c.comunitat_aut_id = voca.comunitat_aut_id
-		INNER JOIN provincies p ON p.comunitat_aut_id = c.comunitat_aut_id
-		RIGHT JOIN vots_candidatures_prov vop ON vop.provincia_id = p.provincia_id
-		INNER JOIN municipis m ON m.provincia_id = p.provincia_id
-		RIGHT JOIN vots_candidatures_mun vom ON vom.municipi_id = m.municipi_id
-			GROUP BY voca.vots, vop.vots, vom.vots;
+SELECT distinct p.nom, p.cognom1, c.nom_curt
+	FROM candidats ca
+		INNER JOIN persones p ON ca.persona_id = p.persona_id
+		INNER JOIN candidatures c ON c.candidatura_id = ca.candidatura_id
+		INNER JOIN municipis m ON m.provincia_id = ca.provincia_id
+			WHERE c.eleccio_id = 1 AND m.provincia_id = 5;
 
 /* Obtén el nom complet del candidat, el seu partit i la província a què es presenta en una elecció específica. */
 
