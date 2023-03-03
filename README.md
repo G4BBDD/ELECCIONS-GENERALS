@@ -20,15 +20,22 @@ Dins del paquet d' Importar podem trobar:
 
 Totes les clases segueixen una estructura, hi ha una part dedicada a fer la connexió a la base de dades, seguidament es fan les "SELECTS" per assignar les id de les FK's
 
-- importarComunitatsAutonomes
+- ImportarComunitatsAutonomes
     - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu.
     
-- importarProvincies
-    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També necesita fer una SELECT per agafar el valor de 
+- ImportarProvincies
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També necesita fer una SELECT per agafar el valor de la "comunitat_aut_id" de la taula "provincies" i asignar-la a la "comunitat_aut_id" de la taula actual.
 
+- ImportarPersones
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. Aquest codi també s'encarrega de comprovar si els valors de "dni" i "data_naixement" tenen com valor "0000-00-00" en el cas de "data_naixement" i "000000000" en el cas de "dni", el programa posara aquest valors com nulls.
 
-- importarPersones
-    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. Aquest codi també s'encarrega de comprovar si els valors de "dni" i "data_naixement" tenen com valor "0000-00-00" en el cas de "data_naixement" i "000000000" en el cas de "dni", el programa posara aquest valors com nulls 
+- ImportarMunicipis
+    -  Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També necesita fer una SELECT per agafar el valor de la "provincia_id" de la taula "municipis" i asignar-la a la "provincia_id" de la taula actual.
+
+- ImportarPartitsPolitics / ImportarCandidatures
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També s'encarrega de definir la "eleccio_id" com "1" ja que només tenim aquesta a la base de dades i hem decidit posar-ho manualment al codi.
+
+- ImportarEleccionsMunicipis
 
 ## Incidents
 Els problemes a l'hora de realitzar l'activitat i les solucions proposades han estat el següents:
