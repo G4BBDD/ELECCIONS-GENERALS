@@ -24,23 +24,23 @@ public class Main {
             resposta = scan.nextInt();
         }
         if (resposta == 1 ){
-            //ImportarComunitatsAutonomes.main();
+            ImportarComunitatsAutonomes.main();
             System.out.println();
-            //ImportarProvincies.main();
+            ImportarProvincies.main();
             System.out.println();
-            //ImportarMunicipis.main();
+            ImportarMunicipis.main();
             System.out.println();
-            //ImportarPartitsPolitics.main();
+            ImportarPartitsPolitics.main();
             System.out.println();
-            //ImportarPersones.main();
+            ImportarPersones.main();
             System.out.println();
-            //ImportarEleccionsMunicipis.main();
+            ImportarEleccionsMunicipis.main();
             System.out.println();
-            //ImportarCandidats.main();
+            ImportarCandidats.main();
             System.out.println();
-            //ImportarVotsCa.main();
+            ImportarVotsCa.main();
             System.out.println();
-            //ImportarVotsProvincials.main();
+            ImportarVotsProvincials.main();
             System.out.println();
             ImportarVotsMunicipal.main();
 
