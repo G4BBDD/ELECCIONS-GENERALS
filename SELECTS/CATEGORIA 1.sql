@@ -1,4 +1,3 @@
-
 /* Mostra quants homes i quantes dones hi han en la BD */ 
 SELECT SUM(sexe = 'M') AS Homes , SUM(sexe = 'F') AS Dones
 	FROM persones;
@@ -13,22 +12,20 @@ SELECT municipi_id, MAX(vots) AS Municipi_Max_Vots
 
 
 /* Mostra el numero de candidats que hi han per cada provincia */ 
-SELECT provincia_id AS Provincies, COUNT(candidat_id) AS Candidats
+SELECT provincia_id AS Provincia, COUNT(candidat_id) AS Candidats
 	FROM candidats
 		GROUP BY provincia_id;
 
 
-/* Mostra el nom, el primer cognom i la edat de les persones que tenen mes de 30 anys */
-SELECT nom, cognom1, timestampdiff(YEAR,data_naixement,CURDATE()) AS edat
-	FROM persones 
-		WHERE timestampdiff(YEAR,data_naixement,CURDATE()) > 30;
+/* Mostra el nom complet mès curt de la base de dades */
+SELECT MIN(CONCAT(p.nom, ' ', p.cognom1, ' ', p.cognom2)) AS Nom_Curt
+	FROM persones p;
         
 
-/* Mostra el nom, el cognom i la data_naixement de les persones el nom dels continguin 2 vocals seguidas*/ 
-	SELECT nom, cognom1, data_naixement
+/* Mostra el nom, el cognom de les persones el nom dels continguin 3 vocals seguidas*/ 
+	SELECT nom, cognom1
 		FROM persones 
 			  WHERE nom RLIKE '[aeiou]{3}';
-
 
 
 
