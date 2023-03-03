@@ -1,17 +1,16 @@
-/* Crea una consulta que ens mostri tots els municipis que pertanyen a la mateixa comunitat autònoma que un municipi que hem seleccionat en el principi */
+/* Mostra el nombre de municipis per província, ordenats per nombre de municipis de més gran a més petit. */
 
-WITH RECURSIVE municipis_comunitat AS (
-	SELECT m.municipi_id, m.nom, p.codi_ine, p.provincia_id, m.districte
+WITH RECURSIVE contar_municipios AS (
+    SELECT provincia_id, COUNT(*) AS num_municipios
 		FROM municipis m
-			INNER JOIN provincies p ON p.provincia_id = m.provincia_id
-				WHERE p.codi_ine = '08' /* Utilitzarem el cas de Catalunya*/
-				
-	UNION ALL
-    
-	SELECT m.municipi_id, m.nom, m.codi_ine, m.provincia_id, m.districte
-		FROM municipis m
-			INNER JOIN municipis_comunitat mc ON m.provincia_id = mc.provincia_id
-				WHERE m.codi_ine != '08' /* Excloem els municipis que ja hem inclòs en la consulta */
+			GROUP BY provincia_id
+    UNION
+    SELECT pr.provincia_id, 0
+		FROM provincies pr
+			INNER JOIN contar_municipios c ON pr.provincia_id = c.provincia_id
+				WHERE c.provincia_id IS NULL
 )
-SELECT *
-FROM municipis_comunitat;
+SELECT pr.nom, cm.num_municipios
+	FROM contar_municipios cm
+		JOIN provincies pr ON cm.provincia_id = pr.provincia_id
+			ORDER BY num_municipios DESC;
