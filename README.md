@@ -54,6 +54,7 @@ Totes les clases segueixen una estructura, hi ha una part dedicada a fer la conn
 Els problemes a l'hora de realitzar l'activitat i les solucions proposades han estat el següents:
 - La data de naixement a la taula "persones" és tot zeros. La solució ha estat donar el valor "null" al camp quan es doni aquest cas.
 - El DNI no és únic, y consisteix en tot zeros. La solució ha estat treure la constraint "unique key" al camp i donar-li el valor null quan es doni aquest cas.
+- La "comunitat_autonoma_id" de la taula "vots_candidatures" li hem canviat el nom per "comunitat_aut_id" per poder fer les importacions correctament.
 
 ## Autors
 
