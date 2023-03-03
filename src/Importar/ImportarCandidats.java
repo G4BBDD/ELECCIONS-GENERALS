@@ -11,8 +11,8 @@ import java.sql.ResultSet;
 public class ImportarCandidats {
 
     public static void main() {
-        String dbURL = "jdbc:mysql://192.168.56.103:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8";
-        //String dbURL = "jdbc:mysql://10.2.157.223:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD
+        //String dbURL = "jdbc:mysql://192.168.56.103:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8";
+        String dbURL = "jdbc:mysql://10.2.157.223:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD
         String usuari = "perepi";
         String contrasenya = "pastanaga";
         String filePath = "C:\\Users\\34622\\Desktop\\02201911_MESA\\04021911.DAT";
