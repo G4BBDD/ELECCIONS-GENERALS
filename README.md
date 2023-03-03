@@ -1,6 +1,6 @@
 # M02 UF2 ELECCIONS GENERALS G4
 
-Projecte desenvolupat en Java amb el propòsit d'extreure dades dels arxius del Ministerio de l’Interior on hi ha dades dels processos electorals en fitxers zip i importar-les en una base de dades.
+Projecte desenvolupat en Java amb el propòsit d'extreure dades dels arxius del Ministerio de l’Interior on hi ha dades dels processos electorals en fitxers .DAT per  importar-les en una base de dades.
 
 ## Funcionament de les importacions
 
@@ -24,7 +24,7 @@ Dins del paquet d' Importar podem trobar:
 - importarProvincies
 - importarPersones
 
-## Authors
+## Autors
 
 Aquesta activitat ha estat realitzada per : 
 -   Elyass el Jerari
