@@ -17,6 +17,7 @@ SELECT nom AS "Municipis"
 							WHERE nom = 'Barcelona');
 
 /*Seleccionar a quina provincia pertany el candidat més jove*/
+	/* Aquesta consulta es pot utilitzar en una base de dades on el camp "data_naixement" no es NULL */
 SELECT nom AS "Provincia" 
 	FROM provincies
 		WHERE provincia_id = (SELECT provincia_id 
