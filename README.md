@@ -18,10 +18,13 @@ Dins del paquet d' Importar podem trobar:
 
 ## Class
 
+Totes les clases segueixen una estructura, hi ha una part dedicada a fer la connexió a la base de dades, seguidament es fan les "SELECTS" per assignar les id de les FK's
+
 - importarComunitatsAutonomes
     - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu.
     
 - importarProvincies
+    - Aquesta classe s'encarrega de fer la connexió a la base de dades amb les credencials que té definides, llegeix l'arxiu .DAT que esta ubicat en una ruta X i agafa les dades que té l'arxiu. També necesita fer una SELECT per agafar el valor de 
 - importarPersones
 
 ## Autors
