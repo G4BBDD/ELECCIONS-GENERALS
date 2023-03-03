@@ -7,13 +7,14 @@ Projecte desenvolupat en Java amb el propòsit d'extreure dades dels arxius del 
 - A l'executar el programa, ha d'escollir l'opció d'importar dades a la bd.
 - El programa farà la importació de cadascuna de les taules mitjançant el codi de cada clase.
 
-## Package
+## Paquets
 
-Hem dividit el projecte en 3 paquets principals: Importar, Select i LleiHondt
+Hem dividit el projecte en 2 paquets principals: Importar i LleiHondt
 
 - Importar
-- Select
 - LleiHondt
+
+Dins del paquet d' Importar podem trobar: 
 
 ## Class
 
