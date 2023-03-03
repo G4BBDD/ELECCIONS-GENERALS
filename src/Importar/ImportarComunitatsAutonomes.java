@@ -13,8 +13,8 @@ public class ImportarComunitatsAutonomes {
     public static void main() {
         System.out.println("Important comunitats autònomes...");
         String filePath = "C:\\Users\\34622\\Desktop\\02201911_MESA\\07021911.DAT"; // Ruta del archivo .DAT
-        //String dbURL = "jdbc:mysql://10.2.157.223:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD real
-        String dbURL = "jdbc:mysql://192.168.56.103:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD real
+        String dbURL = "jdbc:mysql://10.2.157.223:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD real
+        //String dbURL = "jdbc:mysql://192.168.56.103:3306/eleccions_generals?useUnicode=true&characterEncoding=utf-8"; // URL de la BBDD real
         String usuari = "perepi"; // Nombre de usuario de MySQL
         String contrasenya = "pastanaga"; // Contraseña de MySQL
 
