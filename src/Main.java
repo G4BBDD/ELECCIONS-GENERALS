@@ -9,11 +9,11 @@ public class Main {
         int resposta;
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("-------------------------------\n" +
-                           "1 - Importar dades a la BBDD   \n" +
-                           "2 - Calcular llei D'Hondt      \n"+
-                           "3 - Sortir del programa        \n" +
-                           "-------------------------------\n" +
+        System.out.print("╔══════════════════════════════╗\n" +
+                           "║ 1 - Importar dades a la BBDD ║\n" +
+                           "║ 2 - Calcular llei D'Hondt    ║\n"+
+                           "║ 3 - Sortir del programa      ║\n" +
+                           "╚══════════════════════════════╝\n" +
                            ">   ");
 
         resposta = scan.nextInt();
